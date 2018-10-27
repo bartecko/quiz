@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css?family=Kodchasan:300');
+
+$base-width: 768px; 
+$base-font: 'Kodchasan', sans-serif;
+$light-black: #534C3C;
+$purple: #933EC5;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul{
+    list-style: none;
+}
+
+ul.answers{ 
+    flex-wrap: wrap;
+    display: flex;
+    margin: 1rem auto;
+    & li{
+        width: 50%;
+        display: inline-block;
+        letter-spacing: 1.3px;
+    }
+    & label{
+        margin: 2rem;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        & i{
+            background-image: url('../img/circle-outline.svg');
+            background-size: 30px;
+            height: 30px;
+            width: 30px;
+            display: inline-block;
+            position: relative;
+            margin-right: 10px;
+        }
+    }
+    & input{
+        opacity: 0;
+        &:checked + label{
+            color: $purple;
+            & i{
+                background-image: url('../img/circle-full.svg');
+            }
+        }
+    }
+}
+
+.container{
+    position: relative;
+    display: contents;
+    width: 100%;
+    height: 100%;
+}
+
+#app-body{
+    font-family: $base-font;
+    max-width: $base-width;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.question-box{
+    margin-bottom: 30px;
+}
+
+.question-box, footer{
+    text-align: center;
+}
+
+.button{
+    padding: 10px;
+    text-transform: uppercase;
+    border: 0;
+    transition: .4s all ease-in;
+    cursor: pointer;
+    outline: 0;
+    opacity: .8;
+    font-weight: bold;
+    width: 100%;
+    margin: 3px;
+    &:hover{
+        opacity: 1;    
+        border: 2px solid #534C3C;
+        transition: border .5s ease 0s;
+    }
+}
+
+#tracker{
+    font-weight: bold;
+}
+
+#message{
+    font-weight: bold;
+}
+.progress{
+    border: 1px solid $light-black;
+    height: 9px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.question,#tracker{
+    margin-bottom: 20px;
+}
+
+.progress-inner{
+    height: 9px;
+    border-radius: 5px;
+    background-color: $purple;
+}
+
+.restart{
+    display: none;
+}

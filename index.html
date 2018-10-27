@@ -1,12 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Quiz</title>
+    <link rel="stylesheet" href="css/sass.css" type="text/css">
 </head>
+
 <body>
-    
-</body>
+    <div class="container">
+        <div id="app-body">
+            <div class="question-box">
+                <h1 class="question">
+                </h1>
+                <p id="tracker"></p>
+                <div class="progress">
+                    <div class="progress-inner">
+                        
+                    </div>
+                </div>
+                <p id="percents">
+                </p>
+                <p id="message">Pick an answer below!</p>
+            </div>
+            <div class="answer-box">
+                <ul class="answers">
+                    <!-- dynamic answers -->
+                    <li>
+                        <input type="radio" name="choice" id="choice0">
+                        <label for="choice1"><i></i></label>
+                    </li>
+                    <li>
+                        <input type="radio" name="choice" id="choice1">
+                        <label for="choice2"><i></i></label>
+                    </li>
+                    <li>
+                        <input type="radio" name="choice" id="choice2">
+                        <label for="choice3"><i></i></label>
+                    </li>
+                    <li>
+                        <input type="radio" name="choice" id="choice3">
+                        <label for="choice4"><i></i></label>
+                    </li>
+                </ul>
+            </div>
+            <footer>
+                <button class="button button-bordered next">Next</button>
+                <button class="button button-bordered restart">Restart</button>
+            </footer>
+        </div>
+    </div>
+    <script src="js/app.js" type="module"></script>
+</body> 
+
 </html>

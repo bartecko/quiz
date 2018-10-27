@@ -1,0 +1,135 @@
+@import url("https://fonts.googleapis.com/css?family=Kodchasan:300");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+}
+
+ul.answers {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 1rem auto;
+}
+
+ul.answers li {
+  width: 50%;
+  display: inline-block;
+  letter-spacing: 1.3px;
+}
+
+ul.answers label {
+  margin: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+}
+
+ul.answers label i {
+  background-image: url("../img/circle-outline.svg");
+  background-size: 30px;
+  height: 30px;
+  width: 30px;
+  display: inline-block;
+  position: relative;
+  margin-right: 10px;
+}
+
+ul.answers input {
+  opacity: 0;
+}
+
+ul.answers input:checked + label {
+  color: #933EC5;
+}
+
+ul.answers input:checked + label i {
+  background-image: url("../img/circle-full.svg");
+}
+
+.container {
+  position: relative;
+  display: contents;
+  width: 100%;
+  height: 100%;
+}
+
+#app-body {
+  font-family: "Kodchasan", sans-serif;
+  max-width: 768px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.question-box {
+  margin-bottom: 30px;
+}
+
+.question-box, footer {
+  text-align: center;
+}
+
+.button {
+  padding: 10px;
+  text-transform: uppercase;
+  border: 0;
+  -webkit-transition: .4s all ease-in;
+  transition: .4s all ease-in;
+  cursor: pointer;
+  outline: 0;
+  opacity: .8;
+  font-weight: bold;
+  width: 100%;
+  margin: 3px;
+}
+
+.button:hover {
+  opacity: 1;
+  border: 2px solid #534C3C;
+  -webkit-transition: border .5s ease 0s;
+  transition: border .5s ease 0s;
+}
+
+#tracker {
+  font-weight: bold;
+}
+
+#message {
+  font-weight: bold;
+}
+
+.progress {
+  border: 1px solid #534C3C;
+  height: 9px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.question, #tracker {
+  margin-bottom: 20px;
+}
+
+.progress-inner {
+  height: 9px;
+  border-radius: 5px;
+  background-color: #933EC5;
+}
+
+.restart {
+  display: none;
+}
+/*# sourceMappingURL=sass.css.map */
